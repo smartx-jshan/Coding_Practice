@@ -21,10 +21,11 @@ def solution(m: int, n: int, board: List[str])->int:
         #print (board)
 
         # replace board
-        for i in range(1, m):
-            for j in range(n):
-                if board[i][j] == '#':
-                    board[i][j], board[i-1][j] = board[i-1][j], '#'
+	for _ in range(m):
+            for i in range(1, m):
+                for j in range(n):
+                    if board[i][j] == '#':
+                    	board[i][j], board[i-1][j] = board[i-1][j], '#'
         #print (board)
 
         # terminate loop
